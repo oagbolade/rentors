@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Rentors | Stress Free Housing Solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!-- Begin loading animation -->
+    <style>
+      @keyframes hideLoader{ 0%{ width: 100%; height: 100%; } 100%{ width: 0; height: 0; } } body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center; } body:not(.loaded) > div.loader{ opacity: 1; } body:not(.loaded){ overflow: hidden; } body.loaded > div.loader{ animation: hideLoader .5s linear .5s forwards; } .loading-animation{width:40px;height:40px;margin:100px auto;background-color:#227844;border-radius:100%;animation:pulse 1s infinite ease-in-out}@keyframes pulse{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+    </script>
+    <!-- End loading animation -->
+    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+    
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
+        <div class="container">
+          <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
+            <img alt="" width="100px" src="https://res.cloudinary.com/goodnesskay/image/upload/v1575416118/logo_zazxt4.svg">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a href="https://rentors-dashboard.herokuapp.com/register-one.html" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Get Started</a>
+            <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+              <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm"  src="https://res.cloudinary.com/goodnesskay/image/upload/v1575431897/icon-menu_ypw0f4.svg">
+              <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm"  src="https://res.cloudinary.com/goodnesskay/image/upload/v1575431897/icon-x_jbg8xw.svg">
+            </button>
+          </div>
+          <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end" id="navigation-menu">
+            <ul class="navbar-nav my-3 my-lg-0">
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class=" nav-link nav-item" href="list.html">Apartments</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class=" nav-link nav-item" href="landlord.html">List A Property</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class=" nav-link nav-item" href="company.html">Company</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class=" nav-link nav-item" href="#">Our Stories</a>
+                </div>
+            </li>
+            
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class=" nav-link nav-item" href="https://rentors-dashboard.herokuapp.com/login.html">Login</a>
+                </div>
+            </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div data-overlay="" class="bg-primary-3 text-white o-hidden" style="padding-top: 80px !important;">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-9">
+                        <h1 class="display-3">Search For Property</h1>
+                        <div class="col list-page-col">
+                          <div class="lead list-page-col">Where do you want to live?</div>
+                          <ul class="nav nav-pills nav-fill" id="myTab-4" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link list-page-form-filters active" id="home-tab-4" data-toggle="tab" href="#home-4" role="tab" aria-controls="home"
+                                aria-selected="true">All</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link list-page-form-filters" id="profile-tab-4" data-toggle="tab" href="#profile-4" role="tab" aria-controls="profile"
+                                aria-selected="false">APARTMENTS</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link list-page-form-filters" id="contact-tab-4" data-toggle="tab" href="#contact-4" role="tab" aria-controls="contact"
+                                aria-selected="false">HOUSES</a>
+                            </li>
+                          </ul>
+                          <form class="list-page-form flex-column flex-md-row form-group">
+                            <input class="form-control form-control-lg h-100 mb-2 mb-md-0 mr-md-3" name="help-search" placeholder="Surulere, Yaba"
+                              type="search">
+                                <button class="float-right btn btn-lg btn-primary" type="submit">Search</button>
+                          </form>
+                        </div>
+                    <div>
+                </div>
+                        <div class="col-md-12 d-flex flex-wrap align-items-center">
+                            <div class="text-small mb-2 mb-sm-0 mr-2">Popular search:</div>
+                            <ul class="d-flex flex-wrap list-unstyled mb-0">
+                                <li class="m-1">
+                                    <a class="badge badge-pill badge-white" href="#">Ikoyi</a>
+                                </li>
+                                <li class="m-1">
+                                    <a class="badge badge-pill badge-white" href="#">Surulere</a>
+                                </li>
+                                <li class="m-1">
+                                    <a class="badge badge-pill badge-white" href="#">Lekki</a>
+                                </li>
+                                <li class="m-1">
+                                    <a class="badge badge-pill badge-white" href="#">Victoria Island</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute w-50 h-75 bottom right" data-jarallax-element="100" style="z-index: 0; transform: translate3d(0px, -15.9004px, 0px);">
+                <div class="blob blob-4 bg-gradient w-100 h-100 bottom right"></div>
+                <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
+                    <div style="position: fixed;"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section>
+      <div class="container">
+        <!-- <div class="row section-title justify-content-center text-center">
+          <div class="col-md-9 col-lg-8 col-xl-7">
+            <h3 class="display-4">Some properties <mark data-aos="highlight-text" data-aos-delay="300">you might be interested in</mark></h3>
+            <div class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</div>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
+            <div class="card h-100 hover-box-shadow">
+              <div class="d-block bg-gradient rounded-top">
+                <img class="card-img-top hover-fade-out" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image accompanying Circle testimonial">
+                <div class="badge badge-light badge-pill">
+                  <!-- <img src="assets/img/logos/brand/asgardia.svg" alt="Asgardia company logo" class="icon icon-sm m-lg-1"> -->
+                </div>
+              </div>
+              <div class="card-body">
+                <h3>Entire Apartment</h3>
+                <p>
+                    2 Bedroom Flat @ Ajah, Lekki, Lagos For &#x20a6;122,500/Month
+                </p>
+                <a href="single-property.html" class="stretched-link">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
+            <div class="card h-100 hover-box-shadow">
+                <div class="d-block bg-gradient rounded-top">
+                <img class="card-img-top hover-fade-out" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image accompanying Circle testimonial">
+                <div class="badge badge-light badge-pill">
+                    <!-- <img src="assets/img/logos/brand/asgardia.svg" alt="Asgardia company logo" class="icon icon-sm m-lg-1"> -->
+                </div>
+                </div>
+                <div class="card-body">
+                <h3>Entire Apartment</h3>
+                <p>
+                    2 Bedroom Flat @ Magodo, Alausa, Lagos For &#x20a6;252,500/Month
+                </p>
+                <a href="single-property.html" class="stretched-link">View More</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-md-4 mb-lg-0">
+            <div class="card h-100 hover-box-shadow">
+                <div class="d-block bg-gradient rounded-top">
+                <img class="card-img-top hover-fade-out" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Image accompanying Circle testimonial">
+                <div class="badge badge-light badge-pill">
+                    <!-- <img src="assets/img/logos/brand/asgardia.svg" alt="Asgardia company logo" class="icon icon-sm m-lg-1"> -->
+                </div>
+                </div>
+                <div class="card-body">
+                <h3>Entire Apartment</h3>
+                <p>
+                    2 Bedroom Flat @ Isaac John, GRA, Lagos For &#x20a6;152,500/Month
+                </p>
+                <a href="single-property.html" class="stretched-link">View More</a>
+                </div>
+            </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+    
+
+    <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5>Apartments</h5>
+            <ul class="nav flex-row flex-md-column">
+              <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Mini Flats</a>
+              </li>
+              <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Self Contain</a>
+              </li>
+              <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Flats</a>
+              </li>
+              <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Entire Apartment</a>
+               </li>
+               <li class="nav-item mr-3 mr-md-0">
+                 <a href="#" class="nav-link fade-page px-0 py-2">Two Bedroom Flat</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                    <a href="#" class="nav-link fade-page px-0 py-2">Three Bedroom Flat</a>
+                </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5>Locations</h5>
+            <ul class="nav flex-row flex-md-column">
+                <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Ikeja</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Lekki</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Victoria Island</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                <a href="#" class="nav-link fade-page px-0 py-2">Yaba</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                    <a href="#" class="nav-link fade-page px-0 py-2">Surulere</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                    <a href="#" class="nav-link fade-page px-0 py-2">Ikoyi</a>
+                </li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+            <h5>Newsletter</h5>
+            <div class="card card-body bg-white">
+              <p>Get interesting updates and discounts from us</p>
+              <form data-form-email novalidate action="#">
+                <div class="d-flex flex-column flex-sm-row form-group">
+                  <input class="form-control mr-sm-2 mb-2 mb-sm-0 w-auto flex-grow-1" name="email" placeholder="Email Address" type="email" required>
+                  <button type="submit" class="btn btn-primary btn-loading" data-loading-text="Sending">
+                    <!-- Icon for loading animation -->
+                    <svg class="icon bg-white" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>Icon For Loading</title>
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g>
+                          <polygon points="0 0 24 0 24 24 0 24" opacity="0"></polygon>
+                        </g>
+                        <path d="M12,4 L12,6 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,10.9603196 17.7360885,9.96126435 17.2402578,9.07513926 L18.9856052,8.09853149 C19.6473536,9.28117708 20,10.6161442 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z"
+                        fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "></path>
+                      </g>
+                    </svg>
+                    <span>Go</span>
+                  </button>
+                </div>
+                <div data-recaptcha data-sitekey="6Lemz4gUAAAAAElq4ZHFBzI7j8QUiYMn9I0mzQWG" data-size="invisible" data-badge="bottomleft"></div>
+                <div class="d-none alert alert-success w-100" role="alert" data-success-message>
+                  Thanks, a member of our team will be in touch shortly.
+                </div>
+                <div class="d-none alert alert-danger w-100" role="alert" data-error-message>
+                  Please fill all fields correctly.
+                </div>
+                <div class="text-small text-muted">We'll never share your email address</div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+        <div class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+          <div class="col-auto">
+            <div class="d-flex flex-column flex-sm-row align-items-center text-small">
+              <div class="text-muted">&copy; 2019 Rentors  <a href="#" target="_blank">Privacy Policy</a> | <a href="#" target="_blank">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto mt-3 mt-lg-0">
+            <ul class="list-unstyled d-flex mb-0">
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="https://res.cloudinary.com/goodnesskay/image/upload/v1575432254/instagram_beoc48.svg" alt="IG" class="icon icon-xs " >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="https://res.cloudinary.com/goodnesskay/image/upload/v1575432254/twitter_ygmxnd.svg" alt="Twitter" class="icon icon-xs " >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="https://res.cloudinary.com/goodnesskay/image/upload/v1575432254/facebook_eistml.svg" alt="Facebook" class="icon icon-xs " >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="https://res.cloudinary.com/goodnesskay/image/upload/v1575432253/google_wvaoat.svg" alt="Google" class="icon icon-xs " >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img src="https://res.cloudinary.com/goodnesskay/image/upload/v1575432096/icon-arrow-up_jrshcp.svg" alt="Icon" class="icon bg-white" >
+    </a>
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+   
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+    <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+    <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="assets/js/flatpickr.min.js"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+    <script type="text/javascript" src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- Isotope (masonry layouts and filtering) -->
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- jarallax (parallax effect and video backgrounds) -->
+    <script type="text/javascript" src="assets/js/jarallax.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-element.min.js"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- jQuery smartWizard facilitates steppable wizard content -->
+    <script type="text/javascript" src="assets/js/jquery.smartWizard.min.js"></script>
+    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+    <script type="text/javascript" src="assets/js/plyr.polyfilled.min.js"></script>
+    <!-- Prism (displays formatted code boxes) -->
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="assets/js/svg-injector.umd.production.js"></script>
+    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+    <script type="text/javascript" src="assets/js/twitterFetcher_min.js"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script type="text/javascript" src="assets/js/typed.min.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!-- This script appears only on the demo.  It is used to delay unnecessary image loading until after the main page content is loaded. -->
+    <script type="text/javascript">
+      window.addEventListener("load",function(){
+            setTimeout(function() {
+              const delayedImages = document.querySelectorAll('[data-delay-src]');
+              theme.mrUtil.forEach(delayedImages, (index, elem) => {
+                const source = elem.getAttribute('data-delay-src');
+                elem.removeAttribute('data-delay-src');
+                elem.setAttribute('src', source);
+              });
+            }, 500);
+          });
+    </script>
+
+
+  </body>
+
+</html>

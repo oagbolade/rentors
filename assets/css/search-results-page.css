@@ -1,0 +1,51 @@
+.phone{
+  margin: 5px;
+}
+
+.myapartment {
+  height: 100%;
+  width: 100%;
+}
+
+.card{
+    margin: 5px;
+    padding: 10px;
+}
+
+.apartment-details {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .search-results-col{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .col-md-6{
+    max-width: 100%;
+  }
+
+  .col-md-4{
+    max-width: 100%;
+  }
+
+  .col-sm{
+    max-width: 100%;
+  }
+
+  .myapartment {
+  height: 100%;
+  width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card{
+    padding: 10px;
+  }
+
+  .phone{
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,26 @@
+button {
+  margin-top: 10px;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+}
+
+.list-page-form{
+  padding: 5px;
+}
+
+.list-page-col{
+  padding: 0px;
+  margin: 10px;
+}
+
+.list-page-form-filters{
+  color: white;
+}
+
+
+
+
